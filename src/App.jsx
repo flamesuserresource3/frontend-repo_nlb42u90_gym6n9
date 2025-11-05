@@ -1,28 +1,37 @@
-import { useState } from 'react'
+import React from 'react';
+import Hero from './components/Hero';
+import Services from './components/Services';
+import Team from './components/Team';
+import Footer from './components/Footer';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-lg">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">
-          Vibe Coding Platform
-        </h1>
-        <p className="text-gray-600 mb-6">
-          Your AI-powered development environment
-        </p>
-        <div className="text-center">
-          <button
-            onClick={() => setCount(count + 1)}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
-          >
-            Count is {count}
-          </button>
+    <div className="min-h-screen flex flex-col bg-white">
+      <Hero />
+      <Services />
+      <Team />
+
+      {/* Simple contact CTA */}
+      <section id="contact" className="py-16 bg-gradient-to-b from-white to-gray-50">
+        <div className="container mx-auto px-6 text-center">
+          <h3 className="text-2xl md:text-3xl font-bold">Ready to build with AI?</h3>
+          <p className="mt-2 text-gray-600 max-w-2xl mx-auto">
+            Tell us about your idea and we’ll propose a clear, pragmatic plan.
+          </p>
+          <div className="mt-6">
+            <a
+              href="mailto:team@havecode.ai"
+              className="inline-flex items-center justify-center rounded-md bg-black px-5 py-3 text-white shadow hover:shadow-md transition"
+            >
+              Contact Us
+            </a>
+          </div>
         </div>
-      </div>
+      </section>
+
+      <Footer />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
