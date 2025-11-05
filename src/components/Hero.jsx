@@ -4,7 +4,7 @@ import { Rocket, Sparkles } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section className="relative w-full bg-black text-white overflow-hidden">
+    <section id="hero" className="relative w-full bg-black text-white overflow-hidden">
       <div className="relative h-[70vh] w-full">
         <Spline
           scene="https://prod.spline.design/VJLoxp84lCdVfdZu/scene.splinecode"

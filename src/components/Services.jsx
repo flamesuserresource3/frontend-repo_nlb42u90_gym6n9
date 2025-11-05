@@ -1,5 +1,4 @@
 import React from 'react';
-import { services } from '../data';
 import { Brain, Layers, Network, Server } from 'lucide-react';
 
 const iconMap = {
@@ -9,7 +8,7 @@ const iconMap = {
   scalable: Server,
 };
 
-const Services = () => {
+const Services = ({ services }) => {
   return (
     <section id="services" className="relative py-16 bg-white">
       <div className="container mx-auto px-6">

@@ -1,8 +1,7 @@
 import React from 'react';
-import { team } from '../data';
 import { ArrowUpRight, User } from 'lucide-react';
 
-const Team = () => {
+const Team = ({ team }) => {
   return (
     <section id="team" className="relative py-16 bg-gray-50">
       <div className="container mx-auto px-6">
